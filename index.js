@@ -21,7 +21,7 @@ passport.use(new GoogleStrategy({
   clientID: googleKeys.googleClientID,
   clientSecret: googleKeys.googleClientSecret,
   callbackURL: '/auth/google/callback'
-}, (accessToken, refreshToken, profile, done) => { 
+}, (accessToken, refreshToken, profile, done) => {
   let user = {};
     user.accessToken = accessToken;
     user.profile = profile;
@@ -34,7 +34,7 @@ app.get('/auth/google', passport.authenticate('google', {
 }));
 
 app.get('/auth/google/callback', passport.authenticate('google'), (req, res) => {
-        res.send(req.user);
+        res.json(req.user);
 });
 
 const port = 5000;
