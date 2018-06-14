@@ -1,0 +1,33 @@
+{
+  "name": "mycontacts-syncapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "FormData": "^0.10.1",
+    "axios": "^0.17.0",
+    "concat-stream": "^1.6.0",
+    "concurrently": "^3.5.0",
+    "cookie-session": "^2.0.0-beta.3",
+    "cors": "^2.8.4",
+    "cors-prefetch-middleware": "^1.0.0",
+    "express": "^4.16.2",
+    "form-data": "^2.3.1",
+    "images-upload-middleware": "^1.1.1",
+    "nodemon": "^1.12.1",
+    "passport": "^0.4.0",
+    "passport-microsoft": "0.0.5",
+    "redux-promise": "^0.5.3",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "simple-oauth2": "^2.0.1"
+  }
+}
